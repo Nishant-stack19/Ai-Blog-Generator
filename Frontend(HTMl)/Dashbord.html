@@ -1,0 +1,107 @@
+<!-- Hi this is nishant -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Blog Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes rotate{
+            form {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes rotate {
+            from{
+                -webkit-transform: rotate(0deg);
+            }
+            to{
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        .load {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border: solid 10px rgb(3, 16, 90);
+            border-radius: 50%;
+            border-right-color:transparent ;
+            border-left-color:transparent ;
+            border-bottom-color: transparent ;
+
+             -webkit-transition-transform :all 0.5s ease ease-in;
+             -webkit-animation-name:rotate ;
+             -webkit-animation-duration:1s ;
+             -webkit-animation-iteration-count: infinite;
+
+             animation-name: rotate;
+            animation-duration:1s;
+            animation-iteration-count: infinite;
+        }
+
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-900">
+    
+    <!-- Nav bar -->
+     <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div class="container flex ">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/033/279/062/small/artificial-intelligence-icon-symbol-image-illustration-of-the-brain-robot-learning-human-smart-algorithm-design-image-vector.jpg"height="38px" width="46px" class="rounded">
+            <h1 class="text-3xl font-bold mt-3 mx-4">AI Blog Generator</h1>
+        </div>
+        <div class="mx-auto py-4 ">
+            <a href="http://127.0.0.1:5500/Dashbord.html" class="text-white hover:underline text-xl">Home</a>
+        </div>
+        <div class="mx-auto py-4 px-5">
+            <a href="http://127.0.0.1:5500/All_BLog_post.html" class="text-white hover:underline text-xl">All_Blogs</a>
+        </div>
+        <div class="py-4 ">
+            <a href="http://127.0.0.1:3000/Login_page.html" class="text-white hover:underline text-xl">Logout</a>
+        </div>
+     </nav>
+     <br>
+     
+     
+     <!-- Main -->
+    <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+    
+        <div class="max-w-3xl mx-auto bg-white p-7 shadow-md rounded-lg transition-transform transform hover:scale-105 flex flex-col ">
+            
+            <!-- Introduction Section -->
+            <div class="text-center mb-10">
+                <h2 class="font-bold text-2xl mx-auto text-center ">Welcome to the AI BLog Generator</h2>
+            
+                <p class="text-gray-600 p-4 text-lg font-semibold">This is AI BLog generator generate your high-quality Blog or Article from YouTube videos. Simply enter the YouTube link and let the AI Create the content for you!
+                </p>
+                <br>
+                <div class="">
+                    <h2 class="flex font-semibold text-lg mb-4">Enter YouTube vedio Link Below..</h2>
+                    <div class ="flex space-x-4">
+                        <input id="YouTubelink" type="url" placeholder="Paste YouTube Link...." class="flex-grow p-1 border border-blue-400 rounded-l-md">
+                        <button class="font-semibold text-white bg-blue-600 rounded-r-md px-4 py-2 hover:bg-blue-900">Generate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loding circle -->
+            <div id="loading-circle" class="load" style="display: none;"></div>
+
+            <!-- Display of the Generated Blog  -->
+            <section class="flex-grow mt-10">
+                <h2 class="font-semibold text-lg">Generated Blog Article </h2>
+                <div id="blogContent" class="text-grey-800 space-y-4 mt-3"></div>
+            </section> 
+        </div>  
+    </div>
+<br>
+<footer class="text-center bg-gray-300 text-black">
+    Powerd by Nishant Dharukar...
+    <a href="https://www.linkedin.com/in/nishant-dharukar-1658a433b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-blue-700 hover:underline text-lg">view-profile</a>
+</footer>
+</body>
+</html>
